@@ -8,8 +8,7 @@ movie. You can also leave reviews for other users to see. Within the static fold
 contains all the html. 
 
 Credit:
-I referred to online materials by Traversy Media and received help from Aloysius. 
-
+I referred to online materials by Traversy Media
 Video Link:
 https://youtu.be/Uj2U2KtpNBo
 
