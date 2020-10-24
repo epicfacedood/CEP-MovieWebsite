@@ -1,4 +1,6 @@
-# Summative 3
+
+
+VIDEO LINK: https://www.youtube.com/watch?v=Uj2U2KtpNBo&ab_channel=chengandrew
 
 Movie Review Website using Flask
 
@@ -9,8 +11,6 @@ contains all the html.
 
 Credit:
 I referred to online materials by Traversy Media
-Video Link:
-https://youtu.be/Uj2U2KtpNBo
 
 URI: postgres://mrxdnqkwkzriib:84d74e58469d0b77afb553c9b440d6982d42109545ccae44496a98aa45581365@ec2-50-19-127-115.compute-1.amazonaws.com:5432/dblf58vgvfstf
 
