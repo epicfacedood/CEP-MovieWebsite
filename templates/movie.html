@@ -1,0 +1,46 @@
+{% extends "layout.html"%}
+
+{% block body %}
+{% include 'includes/_messages.html' %}
+<h1>{{movie.title}}</h1>
+  <h1>Movie Details</h1>
+
+  <ul>
+      <li>
+        Movie Title: {{ movie.title }}
+      </li>
+      <li>
+        Year of Release: {{ movie.year}}
+      </li>
+      <li>
+        Runtime: {{movie.runtime}} minutes
+      </li>
+      <li>
+        IMDBRating: {{movie.imdbrating}}
+      </li>
+      {% for review in reviews %}
+              <br>
+              <h4>One Review by: {{ review.username }}!</h4>
+              <h4>Rating: {{review.rating}}</h4>
+              <h4>{{review.username}}: {{review.review}}</h4>
+              <br>
+              
+        {% else %}
+            <li>Currently, there are no reviews left by any users...</li>
+        {% endfor %}
+  </ul>
+
+  <form action="" method="POST">
+        <div class="form-group">
+          <label>Leave a Rating on the Movie!</label>
+          <input type="integer" name="rating" class="form-control" value={{request.form.rating}}>
+        </div>
+        <div class="form-group">
+            <label>Leave a Review on the Movie!</label>
+            <input type="text" name="review" class="form-control" value={{request.form.review}}>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+{% endblock %}

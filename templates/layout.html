@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" tpye="text/css" href="{{ url_for('static', filename='main.css')  }}">
+    </head>
+    <body>
+        <header class="site-header">
+          <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+              <a class="navbar-brand mr-4">Movies.net</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                  <a class="nav-item nav-link" href="/home"> Home </a>
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                      {% if session.logged_in %}
+                      <a class="nav-item nav-link" href="/search"> Search </a> 
+                      <a class="nav-item nav-link" href="/logout"> Logout </a>
+                      {% else %}
+                      <a class="nav-item nav-link" href="/register"> Register </a>
+                      <a class="nav-item nav-link" href="/login"> Login </a>
+                      {% endif %}
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <main role="main" class="container">
+          <div class="row">
+            <div class="col-md-8">
+              {% block body %}{% endblock %}
+            </div>
+          </div>
+        </main>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
+

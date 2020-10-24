@@ -1,0 +1,38 @@
+{% extends "layout.html"%}
+
+{% block body %} 
+{% include 'includes/_messages.html' %}
+<h1>Movies</h1>
+  <form action="" method="POST">
+    <div class="form-group">
+      <label>Search Results:</label>
+      <input type="text" name="search" class="form-control" value={{request.form.search}}>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+  {% for movie in results %}
+  <li>
+      <a href="{{ url_for('movies', imdbid=movie.imdbid) }}">
+          <h4>{{movie.title}}, ({{movie.year}}), {{movie.imdbid}}</h4>
+      </a>
+  </li>
+  {% endfor %}
+
+  {% for movie in results2 %}
+  <li>
+      <a href="{{ url_for('movies', imdbid=movie.imdbid) }}">
+          <h4>{{movie.title}}, ({{movie.year}}), {{movie.imdbid}}</h4>
+      </a>
+  </li>
+  {% endfor %}
+
+  {% for movie in results3 %}
+  <li>
+      <a href="{{ url_for('movies', imdbid=movie.imdbid) }}">
+          <h4>{{movie.title}}, ({{movie.year}}), {{movie.imdbid}}</h4>
+      </a>
+  </li>
+  {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Search</h1>
+  <form action="" method="POST">
+    <div class="form-group">
+      <label>Search a Movie Title...</label>
+      <input type="text" name="search" class="form-control" value={{request.form.search}}>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock %}
+
